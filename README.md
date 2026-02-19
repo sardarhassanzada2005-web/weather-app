@@ -2,10 +2,11 @@
 # 📝 Weather App( API )
 
 >### click [_here_](https://sardarhassanzada2005-web.github.io/weather-app/) to see demo
+<<<<<<< HEAD
 ![weather-App]()
 ### Overview
-    A simple weather application that allows users to check current weather
-    information for a selected location using live data from a weather API.
+    This project is a small weather application that fetches and display sweather information
+    for a selected city using a public API.
 ###  Features
     - Search weather by city name
     - Display temperature and weather condition
