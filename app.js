@@ -25,10 +25,11 @@ const searchWeather = () =>{
     .then(responsive => responsive.json())
     .then(data => {
         console.log(data)
-        if(data.cod == 200){
+        if(Number(data.cod) === 200){
+            const country = data.sys.country.toLowerCase();
             city.querySelector('figcaption').innerText = data.name;
-            city.querySelector('img').src = 'https:flagsapi.com/'+data.sys.country+'/shiny/32.png';
-            temperature.querySelector('img').src ='https://openweathermap.org/img/wn/'+data.weather[0].icon+'@4x.png'
+            city.querySelector('img').src =`https://flagsapi.com/w40/${country}.png`;
+            temperature.querySelector('img').src =`https://openweathermap.org/img/wn/${data.weather[0].icon}'@4x.png`;
             temperature.querySelector('figcaption span').innerText = data.main.temp;
             description.innerText = data.weather[0].description;
             clouds.innerText = data.clouds.all;
